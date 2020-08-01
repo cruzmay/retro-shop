@@ -14,6 +14,11 @@ body {
   height: 100%;
 }
 
+.separador {
+  width: 100%;
+  border-top: 2px solid #3E3A3A;
+}
+
 .header__page {
   grid-area: header__page;
   background-color: #3E3A3A;
@@ -403,6 +408,102 @@ body {
   background: #3E3A3A;
   font-size: 8px;
   color: #ffffff;
+}
+
+.cart {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container__product__card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product__card {
+  height: 200px;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 8px;
+}
+.product__card__image img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.product__card h2 {
+  margin: 0;
+}
+.product__card__information {
+  padding: 6px;
+}
+.product__card__information h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.product__card p {
+  font-size: 12px;
+  font-weight: normal;
+}
+.product__card .precio {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 19px;
+  text-align: right;
+}
+.product__card__price {
+  text-align: right;
+}
+
+.container__product__card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50%;
+  background-color: #3E3A3A;
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid gray;
+}
+
+.total__card {
+  padding-top: 20px;
+  width: 90%;
+  max-width: 1200px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.total__card p {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+.total__card a {
+  margin-top: 20px;
+  background-color: #3E3A3A;
+  padding: 10 100px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.28em;
 }
 
 .separator {
