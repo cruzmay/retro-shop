@@ -1,0 +1,22 @@
+-var ruta = "http://monsterbranding.com.mx/images/retro/"
+
+
+mixin carruselItem(image, info, price)
+        .carrusel__item#producto
+            .carrusel__item__image
+                img(src= ruta + image, alt="product")
+            .carrusel__item__info
+                h3=info
+                p=price
+                .carrusel__item__info__footer
+                    .heart
+                        img(src= ruta + "heart.png", alt="heart")
+                    .stars
+                        img(src= ruta + "star.png", alt="estrella")
+                        img(src= ruta + "star.png", alt="estrella")
+                        img(src= ruta + "star.png", alt="estrella")
+                        img(src= ruta + "star.png", alt="estrella")
+                        img(src= ruta + "star.png", alt="estrella")
+                    .button
+                        a(href="#")
+                            p ADD TO CART

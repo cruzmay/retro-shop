@@ -1,0 +1,38 @@
+$primary-color: #3E3A3A;
+$secundary-color: #909090;
+$light-color: #EDEDED;
+$acents: #CC2AA8;
+$white:#ffffff;
+$gradient: linear-gradient(114.27deg, #E9B3B3 17.36%, #CC2AA8 100.85%);
+$fuente: 'Roboto', sans-serif;
+$url: "http://monsterbranding.com.mx/images/retro/";
+
+@mixin background($image) {
+ background: url($url + $image) ;
+}
+
+@mixin fontpage($size, $weight) {
+    font-family: $fuente;
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin displayFlex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+body {
+box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ @include fontpage(14px,bold)
+}
+.container__page {
+    display: grid;
+    grid-template: 60px 1fr 455px / repeat(2, 1fr) ;
+    grid-template-areas: "header__page header__page" 
+                        "content__page content__page" 
+                        "footer__page footer__page";
+    height: 100%;
+}

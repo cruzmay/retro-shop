@@ -1,0 +1,40 @@
+.header__page {      
+    grid-area: header__page;
+    background-color: $primary-color;
+    color: $white;
+    @include displayFlex(row, space-between, center);
+    &__logo {
+        margin: 0;
+        padding-left: 40px;
+    }
+    &__menu {
+        @include displayFlex(row, space-between, center);
+        list-style: none;
+        li a {
+            @include fontpage(16px, 300);
+            color: $white;
+            text-decoration: none;
+            padding: 0 20px;
+        }
+    }
+    &__icons {
+        
+        ul {
+            @include displayFlex(row, center, center);
+            list-style: none;
+            padding-right: 40px;
+        }
+        ul li {
+            padding: 0 20px;
+        }
+        &__search {
+
+        }
+        &__login {
+            
+        }
+        &__cart {
+            
+        }
+      }
+    } 
