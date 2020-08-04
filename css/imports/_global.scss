@@ -6,6 +6,9 @@ $white:#ffffff;
 $gradient: linear-gradient(114.27deg, #E9B3B3 17.36%, #CC2AA8 100.85%);
 $fuente: 'Roboto', sans-serif;
 $url: "http://monsterbranding.com.mx/images/retro/";
+$mediano: 950px;
+$movil: 320px;
+$ruta: "http://monsterbranding.com.mx/images/retro/";
 
 @mixin background($image) {
  background: url($url + $image) ;
@@ -26,7 +29,7 @@ body {
 box-sizing: border-box;
  margin: 0;
  padding: 0;
- @include fontpage(14px,bold)
+ @include fontpage(14px,bold);
 }
 .container__page {
     display: grid;

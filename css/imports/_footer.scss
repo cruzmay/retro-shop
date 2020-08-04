@@ -10,10 +10,17 @@
     display: grid;
     grid-template: 5px 250px 1fr 49px 8px / repeat(2, 1fr);
     background-color: $white;
+    @media screen and (max-width: $mediano) {
+        grid-template: 5px 250px 100px 1fr 49px 8px / repeat(2, 1fr); 
+    }
     &__invitation {
         @include displayFlex(row, center, center);
         grid-row: 2 / 3;
         grid-column: 1 / 2;
+        @media screen and (max-width: $mediano) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+        }
        
         img {
             width: 165px;
@@ -35,7 +42,10 @@
         @include displayFlex(row, center, center);
         grid-row: 2 / 3;
         grid-column: 2 / 3;
-        
+        @media screen and (max-width: $mediano) {
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+        }
             input {
                 border: 1px solid $primary-color;
                 width: 80%;
@@ -62,16 +72,25 @@
     &__logo{
         padding-top: 30px;
         @include displayFlex(row, space-around, flex-end);
+        @media screen and (max-width: $mediano) {
+            width: 100%;
+            padding-top: 40px;
+        }
         img {
             
         }
     }
     &__black-zone {
-        @include displayFlex(row, space-around, flex-start);
+        @include displayFlex(row, space-around, f);
         grid-row: 3 / 4;
         grid-column: 1 / span 3;
         outline: 1px solid gray;
         background-color: $primary-color;
+        @media screen and (max-width: $mediano) {
+            flex-wrap: wrap;
+            grid-row: 4 / 5;
+            grid-column: 1 / 3;
+        }
             ul{
                 list-style: none;
                 li{
@@ -94,9 +113,18 @@
         }
     &__follow-us {
         @include displayFlex(column, center, center);
+        margin-top: -36px;
+        @media screen and (max-width: $mediano) {
+            padding-right: 40px;
+            margin-top: 0;
+        }
         P {
-            padding-top: 30px;
+            padding-top: 0;
+            margin-top: 0;
             color: white;
+            @media screen and (max-width: $mediano) {
+                padding-top: 20px;
+            }
         }
         img {
             width: 25px;
@@ -112,16 +140,32 @@
         font-weight: lighter;
         font-size: 10px;
         letter-spacing: 0.19em;
+        @media screen and (max-width: $mediano) {
+            @include displayFlex(row, space-around, center);
+            grid-row: 5 / 6;
+            grid-column: 1 / 3;
+            flex-wrap: wrap;
+        }
         a {
             color: white;
             font-size: 12px;
             letter-spacing: 0.19em;
+        }
+        p {
+            @media screen and (max-width: $mediano) {
+                order: 2;
+                margin: 0;
+            }
         }
     }
     &__bottom-decoration {
         grid-row: 5 / 6;
         grid-column: 1 / span 3;
         background: $gradient;
+        @media screen and (max-width: $mediano) {
+            grid-row: 6 / 7;
+            grid-column: 1 / 3;
+        }
     }
         
 }

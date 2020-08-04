@@ -3,18 +3,70 @@
     background-color: $primary-color;
     color: $white;
     @include displayFlex(row, space-between, center);
+    &__burguer {
+        display: none;
+        background: url($ruta +"menu.svg");
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        margin-left: 15px;
+        cursor: pointer;
+        @media screen and (max-width: $mediano) {
+            display: block;
+        }
+    }
     &__logo {
         margin: 0;
-        padding-left: 40px;
+        padding-left: 30px;
     }
-    &__menu {
+    &__menu ul {
         @include displayFlex(row, space-between, center);
         list-style: none;
+        .close {
+                display: none;
+            @media screen and (max-width: $mediano) {
+                display: block;
+                position: absolute;
+                background: url($ruta + "close.svg");
+                width: 30px;
+                height: 30px;
+                background-size: cover;
+                background-position: center;
+                right: 19px;
+                top: 19px;
+            }
+        }
+        li {
+            @media screen and (max-width: $mediano) {
+
+            }
+        }
         li a {
             @include fontpage(16px, 300);
             color: $white;
             text-decoration: none;
-            padding: 0 20px;
+            padding: 0 15px;
+            @media screen and (max-width: $mediano) {
+                @include fontpage(25px, 500);
+                line-height: 70px;
+            }
+        }
+        @media screen and (max-width: $mediano) {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background: rgba(204, 42, 168, 0.9);
+            top: 0;
+            bottom: 0;
+            /* right: 0; */
+            z-index: 1;
+            margin: 0;
+            padding-top: 40px;
+            height: 100%;
+            padding-right: 133px;
+            transition: .5s;
         }
     }
     &__icons {
@@ -22,10 +74,17 @@
         ul {
             @include displayFlex(row, center, center);
             list-style: none;
-            padding-right: 40px;
+            padding-right: 30px;
+            @media screen and (max-width: $mediano) {
+                padding: 0;
+                padding-right: 10px;
+            }
         }
         ul li {
-            padding: 0 20px;
+            padding: 0 15px;
+            @media screen and (max-width: $mediano) {
+                padding: 0 8px;
+            }
         }
         &__search {
 

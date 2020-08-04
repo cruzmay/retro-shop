@@ -15,9 +15,15 @@
                 mix-blend-mode: exclusion;
                 padding: 20px;
                 text-align: center;
+                @media screen and (max-width: $mediano) {
+                    @include fontpage(33px, 400);
+                }
             }
                 span {
                     @include fontpage(65px, bold);
+                    @media screen and (max-width: $mediano) {
+                        @include fontpage(45px, bold);
+                    }
                 }
     }   
     &__welcome {

@@ -1,8 +1,8 @@
 -var ruta = "http://monsterbranding.com.mx/images/retro/"
-
+-var modal = [ "street Figter t-shirt",  ]
 
 mixin carruselItem(image, info, price)
-        .carrusel__item#producto
+        .carrusel__item(onclick="openModal()")
             .carrusel__item__image
                 img(src= ruta + image, alt="product")
             .carrusel__item__info
@@ -20,3 +20,8 @@ mixin carruselItem(image, info, price)
                     .button
                         a(href="/cart.html")
                             p ADD TO CART
+
+mixin checkboxItem(textoCheck) 
+                .checkbox__item
+                    input(type="checkbox")
+                    p=textoCheck

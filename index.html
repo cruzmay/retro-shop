@@ -8,10 +8,10 @@
   </head>
   <body>
     <section class="container__page">
-      <header class="header__page">
+      <header class="header__page"><a class="header__page__burguer" href="#" onclick="toogleMenu()">     </a>
         <figure class="header__page__logo"><a href="/index.html"><img src="http://monsterbranding.com.mx/images/retro/retro-logo.png" alt="logo"/></a></figure>
-        <div class="header__page__menu">
-          <ul class="header__page__menu">
+        <nav class="header__page__menu">
+          <ul id="hiddenMenu" style="left:-400px"><a class="close" href="#" onclick="toogleMenu()"></a>
             <li class="header__page__menu--item"><a href="/store.html">cloth</a></li>
             <li class="header__page__menu--item"><a href="/store.html">Electronics</a></li>
             <li class="header__page__menu--item"><a href="/store.html">toys</a></li>
@@ -19,14 +19,14 @@
             <li class="header__page__menu--item"><a href="/store.html">gifts</a></li>
             <li class="header__page__menu--item"><a href="/store.html">Blog</a></li>
           </ul>
-        </div>
-        <div class="header__page__icons">
+        </nav>
+        <nav class="header__page__icons">
           <ul>
-            <li class="header__page__icons__search"><a href="/store.html"><img src="http://monsterbranding.com.mx/images/retro/search.png" alt="search"/></a></li>
+            <li class="header__page__icons__search" aria-label="busqueda"><a href="/store.html"><img src="http://monsterbranding.com.mx/images/retro/search.png" alt="search"/></a></li>
             <li class="header__page__icons__login"><a href="/store.html"><img src="http://monsterbranding.com.mx/images/retro/user.png" alt="login"/></a></li>
             <li class="header__page__icons__cart"><a href="/store.html"><img src="http://monsterbranding.com.mx/images/retro/shopping-bag.png" alt="cart"/></a></li>
           </ul>
-        </div>
+        </nav>
       </header>
       <section class="content__page">
         <main class="content__page__main"> 
@@ -37,7 +37,7 @@
         </div>
         <h2 class="carrusel__title">MOST POPULARS</h2>
         <div class="carrusel">
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/panam.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>Tenis</h3>
@@ -50,7 +50,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/ecto1.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>Ghostbusters Ecto 1</h3>
@@ -63,7 +63,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/glases.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>Lentes</h3>
@@ -76,7 +76,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/streetfigter.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>Street figther 2 t-shirt</h3>
@@ -89,7 +89,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/book.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>libro mario bross</h3>
@@ -102,7 +102,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/nintendo.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>mini nes</h3>
@@ -115,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/vinil.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>Tocadiscos</h3>
@@ -128,7 +128,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/pacman.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>Llavero videojuego</h3>
@@ -141,7 +141,7 @@
               </div>
             </div>
           </div>
-          <div class="carrusel__item" id="producto">
+          <div class="carrusel__item" onclick="openModal()">
             <div class="carrusel__item__image"><img src="http://monsterbranding.com.mx/images/retro/megaman.png" alt="product"/></div>
             <div class="carrusel__item__info">
               <h3>megaman t-shirt</h3>

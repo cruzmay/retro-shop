@@ -1,4 +1,4 @@
-.overlay.off#overlay
+.overlay#overlay(style="display:none")
     .modal#modal
         .modal__header
             .modal__header__descripcion
@@ -6,7 +6,7 @@
                 p playera para todas las edades, diferentes tallas
             .modal__header__logo
                 img(src= ruta + "retro-logo.png", alt="logo")
-            .close#close X
+            .close#close(onclick="openModal()") X
         .modal__detalle
             .modal__detalle__imagen
                 img(src= ruta + "streetfigter.png", alt="producto")
@@ -25,66 +25,33 @@ section.content__page
     .banner__title
         h2 MOST POPULARS
     section.products
-        .products__filters
-
+        .filter__button__mobile(onclick="openFilters()")
+            a(href="#") FILTERS
+            img#expand(src= ruta + "expand.png", alt="")
+        .products__filters#filters
             .checkbox
                 h2 FILTER BY PRICE
-                .checkbox__item
-                    input(type="checkbox")
-                    p $100
-                .checkbox__item
-                    input(type="checkbox")
-                    p $200
-                .checkbox__item
-                    input(type="checkbox")
-                    p $300
-                .checkbox__item
-                    input(type="checkbox")
-                    p $500
-                .checkbox__item
-                    input(type="checkbox")
-                    p $700
-                .checkbox__item
-                    input(type="checkbox")
-                    p $600
+                +checkboxItem('$100') 
+                +checkboxItem('$200') 
+                +checkboxItem('$300')
+                +checkboxItem('$500')
+                +checkboxItem('$700')
+                +checkboxItem('$800')
             .checkbox
                 h2 FILTER BY MARK
-                .checkbox__item
-                    input(type="checkbox")
-                    p ADIDAS
-                .checkbox__item
-                    input(type="checkbox")
-                    p NIKE
-                .checkbox__item
-                    input(type="checkbox")
-                    p CONVERSE
-                .checkbox__item
-                    input(type="checkbox")
-                    p PANAM
+                +checkboxItem('ADIDAS')
+                +checkboxItem('NIKE')
+                +checkboxItem('CONVERSE')
+                +checkboxItem('PANAM')
             .checkbox
                 h2 FILTER BY COLOR
-                .checkbox__item
-                    input(type="checkbox")
-                    p RED
-                .checkbox__item
-                    input(type="checkbox")
-                    p BLUE
-                .checkbox__item
-                    input(type="checkbox")
-                    p GREEN
-                .checkbox__item
-                    input(type="checkbox")
-                    p GRAY
-                .checkbox__item
-                    input(type="checkbox")
-                    p TURQOISE
-                .checkbox__item
-                    input(type="checkbox")
-                    p LEMON
-            
-               
-            
-
+                +checkboxItem('RED')
+                +checkboxItem('BLUE')
+                +checkboxItem('GREEN')
+                +checkboxItem('GRAY')
+                +checkboxItem('TURQUISE')
+                +checkboxItem('GRAY')
+                +checkboxItem('BLACK')
 
         .products__grid
             +carruselItem("panam.png", "Tenis", "$50.00")

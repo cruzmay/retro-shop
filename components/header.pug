@@ -1,9 +1,11 @@
 header.header__page
+    a.header__page__burguer(href="#", onclick="toogleMenu()")      
     figure.header__page__logo
         a(href="/index.html")
             img(src= ruta + "retro-logo.png", alt="logo")
-    .header__page__menu
-        ul.header__page__menu
+    nav.header__page__menu
+        ul#hiddenMenu(style="left:-400px")
+            a.close(href="#", onclick="toogleMenu()")
             li.header__page__menu--item
                 a(href="/store.html") cloth
             li.header__page__menu--item
@@ -16,9 +18,9 @@ header.header__page
                 a(href="/store.html") gifts
             li.header__page__menu--item
                 a(href="/store.html") Blog
-    .header__page__icons
+    nav.header__page__icons
         ul
-            li.header__page__icons__search
+            li.header__page__icons__search(aria-label="busqueda")
                 a(href="/store.html")
                     img(src=ruta + "search.png", alt="search")
             li.header__page__icons__login
